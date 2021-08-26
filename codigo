@@ -1,0 +1,71 @@
+def mensagens_iniciais():
+    print("Seja bem-vindo ao Python The Game!")
+    print("REGRAS")
+    print("Ao longo do jogo ira aparecer uma série de perguntas, uma dica talvez sua resposta está certo, porém seu Capslook deve estar ligado Hahahah")
+
+mensagens_iniciais()
+print("Gostaria de saber como você gosta de ser chamado!")
+nome_jogador = input("Digite o seu nome: ")
+print(" Olá {}! É um prazer ter você aqui!".format(nome_jogador))
+
+
+idade_jogador = int(input("Em que ano você nasceu?"))
+print(" Olá {}! É um prazer ter você aqui!".format(nome_jogador))
+
+idade_calculada = 2021 - idade_jogador
+
+print("Que de mais, pelo que eu pude calcular você tem {} anos. Bom agora que já te conheço um pouco o que acha de embarcarmos para uma missão?".format(idade_calculada))
+escolha = input("SIM - Quero iniciar uma aventura \nNÃO - quero ficar por aqui")
+
+if "sim" == escolha:
+    print("Que fantástico, vai ser um prazer ter você na nossa missão!")
+    print(" Mas antes vamos testar seu racicionio...")
+    resposta = ""
+    tentativas = 0
+    while resposta != "milho":
+        resposta = input("Descrubra o enigma: Tem barba e não é bode, tem dente e não morde?")
+        tentativas = tentativas + 1
+    input("Parabéns, vamos para próxima!")
+    input("Para chegar a resposta você utilizou {} tentativas".format(tentativas))
+
+    resposta = ""
+    tentativas = 0
+    while resposta != "eco":
+        resposta = input("Descrubra o enigma: Muitos podem ouvi-lo, mas ninguém o pode ver. Se não falarmos, ele também não falará.?")
+        tentativas = tentativas + 1
+    input("Parabéns, vamos para próxima!")
+    input("Para chegar a resposta você utilizou {} tentativas".format(tentativas))
+
+    resposta = ""
+    tentativas = 0
+    while resposta != "a bateria":
+        resposta = input(
+            "Descrubra o enigma: Não tem vida, mas pode morrer?")
+        tentativas = tentativas + 1
+    input("Parabéns, Capitão Adams vai ficar orgulhoso que desvendou as 3 senhas da nossa nave!")
+    input("Para chegar a resposta você utilizou {} tentativas".format(tentativas))
+
+    copa_america = (1989, 1969, 1959, 1979, 2019)
+    futebol = int(input("Já vi que você é bom, vamos ver se é capaz de responder qual ano o homem pisou na lua pela primeira vez?"))
+    if futebol in copa_america:
+        print("Parabén você me nos supreendeu mais uma vez!")
+
+    input("Eu e o Capitão Adams estamos muito empolgados com seu potencial, então vamos deixar você escolher algumas comidas  para levarmos para nossa missão!")
+    input("E quando acabar a lista digita SAIR")
+
+    comidas = ""
+    lista_de_comidas = []
+    while comidas != "SAIR":
+        comidas = input("Digigite os alimentos que quer levar:")
+        lista_de_comidas.append(comidas)
+
+    lista_de_comidas.pop(1)
+
+    print(lista_de_comidas)
+
+
+else:
+    if "nao" == escolha:
+        print("Pena que você não quer participar da nossa missão!\nGAME OVER!")
+    else:
+        print("Comando inválido. GAME OVER")
